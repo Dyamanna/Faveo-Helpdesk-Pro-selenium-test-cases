@@ -51,29 +51,6 @@ public class Web_208_2011_tag_create_range extends Login_faveo_admin {
 		}
 		else
 			System.out.println("fail");
-			Select s= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
-			Thread.sleep(6000);		// to click on help topic 
-			s.selectByVisibleText("10");
-			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-			FileUtils.copyFile(scrFile, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(208).png"));
-			Thread.sleep(10000);
-			Select s1= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
-			s1.selectByVisibleText("25");
-			File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-			FileUtils.copyFile(scrFile1, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(209).png"));
-
-			Thread.sleep(10000);
-			Select s2= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
-		
-			s2.selectByVisibleText("50");
-			File scrFile12= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-			FileUtils.copyFile(scrFile12, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(210).png"));
-
-			Thread.sleep(10000);
-		Select s3= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
-			s3.selectByVisibleText("100");
-			File scrFile13 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-			FileUtils.copyFile(scrFile13, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(211).png"));
 			Thread.sleep(10000);
 		driver.findElement(By.xpath(".//*[@id='navbar-collapse']/ul[1]/li/a")).click();
 		Thread.sleep(10000);	

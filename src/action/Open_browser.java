@@ -4,12 +4,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.eclipse.jetty.util.log.Log;
 import org.eclipse.jetty.util.log.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
@@ -19,7 +21,7 @@ public class Open_browser{
 	public  WebDriver driver;
 	public static Logger log = Log.getLogger("");
 	public WebDriverWait wait;
-	@BeforeClass()
+	@BeforeClass
 	public void browser()
 	{
 
@@ -34,11 +36,25 @@ public class Open_browser{
 		driver.get("http://jamboreebliss.com/Dyamanna/public/");
 		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 		}
-//		@AfterClass
-//		public void close()
-//		{
-//			driver.quit();
-//	}
+		@AfterClass
+	public void close() throws InterruptedException
+	{
+		driver.quit();
+}
+		@AfterMethod
+		public void logout() throws InterruptedException
+		{
+			driver.findElement(By.xpath(".//*[@id='navbar-collapse']/ul[2]/li[5]/a/img")).click();
+			Thread.sleep(5000);
+			driver.findElement(By.xpath("//b[.='Sign out']);")).click();
+			Thread.sleep(5000);
+			
+					
+					
+					
+					
+					
+		}
 }
 
 

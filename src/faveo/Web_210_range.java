@@ -16,7 +16,7 @@ import action.Login_faveo_admin;
 
 public class Web_210_range extends Login_faveo_admin{
 	@Test
-	public void tag() throws InterruptedException, IOException
+	public void range() throws InterruptedException, IOException
 	{SoftAssert as=new SoftAssert();
 	Thread.sleep(10000);	
 	driver.findElement(By.xpath("//a[@href='http://jamboreebliss.com/Dyamanna/public/admin']")).click();
@@ -24,31 +24,29 @@ public class Web_210_range extends Login_faveo_admin{
 	JavascriptExecutor j=(JavascriptExecutor)driver;
 	j.executeScript("window.scrollBy(0,800)", "");
 	Thread.sleep(6000);
-	driver.findElement(By.xpath("html/body/div[1]/div/section[2]/div[4]/div[2]/div/div/div[8]/div/div/a/span/i")).click();
-	Thread.sleep(10000);	
-		Select s= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
-		Thread.sleep(6000);		// to click on help topic 
-		s.selectByVisibleText("10");
+	driver.findElement(By.xpath("html/body/div[1]/div/section[2]/div[4]/div[2]/div/div/div[8]/div/div/a/span/i")).click();	
+	Select s= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
+		s.selectByVisibleText("25");
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-		FileUtils.copyFile(scrFile, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(208).png"));
+		FileUtils.copyFile(scrFile, new File("C:\\Users\\Dyamanna\\Screenshots\\208(edit).png"));
 		Thread.sleep(10000);
 		Select s1= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
-		s1.selectByVisibleText("25");
+		s1.selectByVisibleText("10");
 		File scrFile1 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-		FileUtils.copyFile(scrFile1, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(209).png"));
+		FileUtils.copyFile(scrFile1, new File("C:\\Users\\Dyamanna\\Screenshots\\209(edit).png"));
 
 		Thread.sleep(10000);
 		Select s2= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
 	
 		s2.selectByVisibleText("50");
 		File scrFile12= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-		FileUtils.copyFile(scrFile12, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(210).png"));
+		FileUtils.copyFile(scrFile12, new File("C:\\Users\\Dyamanna\\Screenshots\\210(edit).png"));
 
 		Thread.sleep(10000);
 	Select s3= new Select(driver.findElement(By.xpath(".//*[@id='chumper_length']/label/select")));
 		s3.selectByVisibleText("100");
 		File scrFile13 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);//screenshot
-		FileUtils.copyFile(scrFile13, new File("c:\\Users\\yari\\git\\laxmi\\Screenshots\\img(211).png"));
+		FileUtils.copyFile(scrFile13, new File("C:\\Users\\Dyamanna\\Screenshots\\211(edit).png"));
 		as.assertAll();
 	}
 
