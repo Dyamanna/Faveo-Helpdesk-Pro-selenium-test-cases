@@ -49,12 +49,11 @@ public class Web_229_systemSetting extends Login_faveo_admin{
 		if(url.equalsIgnoreCase(appurl))
 		{
 			log.info("both urls are equal",true);
+			System.out.println("both urls are equal");
 		}
 		else
 			log.info("not equal",true);
-		driver.findElement(By.xpath(".//*[@id='navbar-collapse']/ul[2]/li[4]/a/span")).click();
-		driver.findElement(By.xpath("//b[.='Sign out']);")).click();
-	
+		System.out.println("both urls are not equal");
 		as.assertAll();
 			} 
 

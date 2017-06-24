@@ -41,21 +41,21 @@ public class Open_browser{
 	{
 		driver.quit();
 }
-		@AfterMethod
-		public void logout() throws InterruptedException
-		{
-			driver.findElement(By.xpath(".//*[@id='navbar-collapse']/ul[2]/li[5]/a/img")).click();
-			Thread.sleep(5000);
-			driver.findElement(By.xpath("//b[.='Sign out']);")).click();
-			Thread.sleep(5000);
-			
-					
+//		@AfterMethod
+//		public void logout() throws InterruptedException
+//		{
+//			driver.findElement(By.xpath(".//*[@id='navbar-collapse']/ul[2]/li[5]/a/img")).click();
+//			Thread.sleep(5000);
+//			driver.findElement(By.xpath("//b[.='Sign out']);")).click();
+//			Thread.sleep(5000);
+//			
+//					
 					
 					
 					
 					
 		}
-}
+
 
 
 

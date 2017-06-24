@@ -29,6 +29,8 @@ public class Login_faveo_admin extends Open_browser {
                 String tit = driver.getTitle();
                 System.out.println(tit);
             	Thread.sleep(8000);
+            	
+            	
 
 		
 		

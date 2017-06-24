@@ -18,8 +18,7 @@ public class Web_188_enable extends Login_faveo_admin{
 
 public void create() throws InterruptedException, IOException
 {Thread.sleep(6000);
-//to click on admin
-
+//to click on admi
 driver.findElement(By.xpath("//a[@href='http://jamboreebliss.com/Dyamanna/public/admin']")).click();
 Thread.sleep(10000);		// to click on admin
 //click on ticket type

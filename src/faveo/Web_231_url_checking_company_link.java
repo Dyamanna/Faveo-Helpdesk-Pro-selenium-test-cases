@@ -15,7 +15,7 @@ public class Web_231_url_checking_company_link extends Login_faveo_admin {
 	@Test
 	public void url() throws InterruptedException, IOException  {
 	Thread.sleep(5000);
-	{driver.findElement(By.xpath(".//*[@id='navbar-collapse']/ul[2]/li[4]/a/span")).click();
+	driver.findElement(By.xpath(".//*[@id='navbar-collapse']/ul[2]/li[4]/a/span")).click();
 	driver.findElement(By.xpath("//b[.='Sign out']);")).click();
 	String exp1="Dyamanna";
 	String act21 = driver.findElement(By.xpath(".//*[@id='logo']/a")).getText();
@@ -44,4 +44,4 @@ public class Web_231_url_checking_company_link extends Login_faveo_admin {
 	FileUtils.copyFile(scrFile11, new File("C:\\Users\\Dyamanna\\Screenshots\\229(3).png"));	
 	
 
-}}}
+}}
