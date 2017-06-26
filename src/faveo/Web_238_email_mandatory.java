@@ -45,7 +45,6 @@ public class Web_238_email_mandatory     extends Login_faveo_admin {
 		//submitticket
 		driver.findElement(By.xpath(".//*[@id='corewidgetbox']/div/span[2]/a/span")).click();
 		Thread.sleep(5000);	
-		
 		JavascriptExecutor j1=(JavascriptExecutor)driver;
 		j1.executeScript("window.scrollBy(0,300)", "");
 		
