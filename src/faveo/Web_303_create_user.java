@@ -4,6 +4,7 @@ import generics.Excel;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -34,17 +35,15 @@ public class Web_303_create_user  extends Login_faveo_admin {
 			String mail = Excel.getCellValue("./data/status.xlsx", "user", i, 0);
 			String user = Excel.getCellValue("./data/status.xlsx", "user", i, 1);
 			String fname = Excel.getCellValue("./data/status.xlsx", "user", i, 2);
-			Thread.sleep(5000); 
 			
-			driver.findElement(By.xpath(".//*[@id='email']")).sendKeys(mail);
-			Thread.sleep(5000); 
+			driver.findElement(By.xpath("(//input[@class='form-control'])[1]")).sendKeys(mail);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 			
-			driver.findElement(By.xpath(".//*[@id='user_name']")).sendKeys(user);
-			Thread.sleep(5000); 
+			driver.findElement(By.xpath("(//input[@class='form-control'])[2]")).sendKeys(user);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 			
-			driver.findElement(By.xpath(".//*[@id='first_name")).sendKeys(fname);
-			Thread.sleep(5000); 
-			
+			driver.findElement(By.xpath("(//input[@class='form-control'])[3]")).sendKeys(fname);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 			driver.findElement(By.xpath("html/body/div[1]/div/section[2]/form/div/div[3]/input")).click();
 			Thread.sleep(5000); 
 		}
